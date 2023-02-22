@@ -1,4 +1,5 @@
 #include <Pelinjan.h>
+#include <iostream>
 
 class Sandbox : public Pelinjan::Application
 {
