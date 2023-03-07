@@ -4,6 +4,9 @@
     <Filter Include="Pelinjan">
       <UniqueIdentifier>{D61A97B2-C2E7-F1BD-EB00-E065D72C274C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pelinjan\Events">
+      <UniqueIdentifier>{FA79D3FC-6605-41C1-6F16-C4B5DB209DC1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pelinjan.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Pelinjan\EntryPoint.h">
       <Filter>Pelinjan</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pelinjan\Events\ApplicationEvent.h">
+      <Filter>Pelinjan\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pelinjan\Events\Event.h">
+      <Filter>Pelinjan\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pelinjan\Events\KeyEvent.h">
+      <Filter>Pelinjan\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pelinjan\Events\MouseEvent.h">
+      <Filter>Pelinjan\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Pelinjan\Log.h">
       <Filter>Pelinjan</Filter>
