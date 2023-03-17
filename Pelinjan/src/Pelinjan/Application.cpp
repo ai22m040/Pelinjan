@@ -1,3 +1,4 @@
+#include "pepch.h"
 #include "Application.h"
 
 #include "Pelinjan/Events/ApplicationEvent.h"
@@ -15,7 +16,7 @@ namespace Pelinjan
 
 	void Application::Run()
 	{
-		// just for testing the event system
+		// just for testing the event system -- will be removed later
 		WindowResizeEvent e(1280, 720);
 		if (e.IsInCategory(EventCategoryApplication))
 		{

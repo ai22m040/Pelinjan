@@ -10,6 +10,12 @@ workspace "Pelinjan"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+-- include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Pelinjan/vendor/GLFW/include"
+
+include "Pelinjan/vendor/GLFW" -- to include the premake5 file of the GLFW submodule
 	
 project "Pelinjan"
 	location "Pelinjan"
@@ -18,6 +24,10 @@ project "Pelinjan"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	
+	--precompiled header
+	pchheader "pepch.h"
+	pchsource "Pelinjan/src/pepch.cpp"
 	
 	files
 	{
@@ -28,9 +38,16 @@ project "Pelinjan"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
 	}
-
+	
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
+	}
+	
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"

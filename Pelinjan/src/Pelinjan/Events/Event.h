@@ -1,9 +1,6 @@
 #pragma once
-
+#include "pepch.h"
 #include "Pelinjan/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Pelinjan {
 
